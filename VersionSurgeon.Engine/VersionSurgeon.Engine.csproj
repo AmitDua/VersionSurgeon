@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>VersionSurgeon</PackageId>
+    <Version>1.0.3</Version>
+    <Authors>Amit Dua</Authors>
+    <Company>VersionSurgeon</Company>
+    <Description>VersionSurgeon is a plugin-based framework for semantic versioning and compatibility analysis in .NET. It detects breaking changes between code versions and recommends appropriate version bumps.</Description>
+    <PackageTags>versioning;semantic;analyzers;dotnet;roslyn;api-diff;compatibility;nuget</PackageTags>
+    <RepositoryUrl>https://github.com/AmitDua/VersionSurgeon</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/AmitDua/VersionSurgeon/main/icon.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\CONTRIBUTING.md" Pack="true" PackagePath="" />
+     <None Include="icon.png" Pack="true" PackagePath="" />
+
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VersionSurgeon.Core\VersionSurgeon.Core.csproj" />
+    <ProjectReference Include="..\VersionSurgeon.Plugins\VersionSurgeon.Plugins.csproj" />
+  </ItemGroup>
+</Project>
